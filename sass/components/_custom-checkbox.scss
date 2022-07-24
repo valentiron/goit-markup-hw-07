@@ -10,11 +10,12 @@
     outline: 2px solid var(--dark-txt-color);
     outline-offset: -1px;
       transition: background-color var(--animation), outline-color var(--animation);
-}
 
-
-.custom-checkbox__icon {
+      &__icon {
   fill:currentColor;
-
   transition: fill var(--animation);
 }
+
+}
+
+

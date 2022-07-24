@@ -72,7 +72,7 @@ img {
   gap: var(--set-gap);
 }
 
-.social-list {
+.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,13 +81,12 @@ img {
           justify-content: center;
 }
 
-.social__item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .social__item {
   width: 44px;
   height: 44px;
+}
+.social__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social__link {
@@ -108,9 +107,7 @@ img {
   -webkit-transition: color var(--animation), background-color var(--animation);
   transition: color var(--animation), background-color var(--animation);
 }
-
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
 }
@@ -123,9 +120,7 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white-color);
 }
-
-.social__link--footer:hover,
-.social__link--footer:focus {
+.social__link--footer:hover, .social__link--footer:focus {
   background-color: var(--accent-color);
 }
 
@@ -327,7 +322,6 @@ img {
   -webkit-transition: background-color var(--animation), outline-color var(--animation);
   transition: background-color var(--animation), outline-color var(--animation);
 }
-
 .custom-checkbox__icon {
   fill: currentColor;
   -webkit-transition: fill var(--animation);
@@ -380,7 +374,6 @@ img {
   -webkit-transition: opacity var(--animation), visibility var(--animation);
   transition: opacity var(--animation), visibility var(--animation);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -452,7 +445,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .nav__link--current::after {
   position: absolute;
   content: "";
@@ -487,9 +479,7 @@ header {
   -webkit-transition: color var(--animation);
   transition: color var(--animation);
 }
-
-.header__link:hover,
-.header__link:focus {
+.header__link:hover, .header__link:focus {
   color: var(--accent-color);
 }
 
@@ -552,21 +542,17 @@ header {
 .work {
   padding-top: 0;
 }
-
 .work__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 .work__item:not(:last-child) {
   margin-right: var(--set-gap);
 }
-
 .work__item {
   position: relative;
 }
-
 .work__description {
   position: absolute;
   bottom: 0;
@@ -596,7 +582,21 @@ header {
 .team {
   background-color: var(--section-bg-color);
 }
-
+.team__person-descript {
+  padding-top: var(--set-gap);
+  padding-bottom: var(--set-gap);
+}
+.team__person-name {
+  font-weight: 500;
+  color: var(--dark-txt-color);
+  margin-bottom: 10px;
+}
+.team__person-position {
+  color: var(--main-txt-color);
+}
+.team__links {
+  margin-top: 16px;
+}
 .team__item {
   -ms-flex-preferred-size: calc((100% - var(--set-gap) * 4) / 4);
       flex-basis: calc((100% - var(--set-gap) * 4) / 4);
@@ -614,25 +614,6 @@ header {
   letter-spacing: 0.03em;
 }
 
-.team__person-descript {
-  padding-top: var(--set-gap);
-  padding-bottom: var(--set-gap);
-}
-
-.team__person-name {
-  font-weight: 500;
-  color: var(--dark-txt-color);
-  margin-bottom: 10px;
-}
-
-.team__person-position {
-  color: var(--main-txt-color);
-}
-
-.team__links {
-  margin-top: 16px;
-}
-
 .clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -642,13 +623,12 @@ header {
           justify-content: center;
 }
 
-.clients__item:not(:last-child) {
-  margin-right: var(--set-gap);
-}
-
 .clients__item {
   width: 170px;
   height: 92px;
+}
+.clients__item:not(:last-child) {
+  margin-right: var(--set-gap);
 }
 
 .clients__link {
@@ -669,9 +649,7 @@ header {
   -webkit-transition: color var(--animation), border-color var(--animation);
   transition: color var(--animation), border-color var(--animation);
 }
-
-.clients__link:hover,
-.clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -701,23 +679,19 @@ header {
   transition: box-shadow var(--animation);
   transition: box-shadow var(--animation), -webkit-box-shadow var(--animation);
 }
-
-.portfolio__link:hover,
-.portfolio__link:focus {
+.portfolio__link:hover, .portfolio__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio__link:hover .overlay__text, .portfolio__link:focus .overla__text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .portfolio__item {
   -ms-flex-preferred-size: calc((100% - var(--set-gap) * 2) / 3);
       flex-basis: calc((100% - var(--set-gap) * 2) / 3);
   background: var(--white-color);
-}
-
-.portfolio__link:hover .overlay__text,
-.portfolio__link:focus .overla__text {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .portfolio__project-description {
@@ -859,11 +833,9 @@ header {
   -webkit-transition: border-color var(--animation);
   transition: border-color var(--animation);
 }
-
 .footer__input:focus {
   border-color: var(--accent-color);
 }
-
 .footer__input-icon {
   fill: currentColor;
 }
@@ -920,9 +892,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 448px;
-}
-
-.modal__register-field {
   margin-bottom: 10px;
 }
 
@@ -954,11 +923,9 @@ header {
   -webkit-transition: border-color var(--animation);
   transition: border-color var(--animation);
 }
-
 .modal__register-input:focus {
   border-color: var(--accent-color);
 }
-
 .modal__register-input:focus + .modal__register-icon {
   fill: var(--accent-color);
 }
@@ -977,7 +944,6 @@ header {
   padding: 12px 16px;
   resize: none;
 }
-
 .modal__register-text::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -985,7 +951,6 @@ header {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .modal__register-text::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -993,7 +958,6 @@ header {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .modal__register-text:-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -1001,7 +965,6 @@ header {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .modal__register-text::-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -1009,7 +972,6 @@ header {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .modal__register-text::placeholder {
   font-weight: 400;
   font-size: 14px;

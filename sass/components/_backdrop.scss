@@ -11,10 +11,10 @@
   pointer-events: initial;
 
   transition: opacity var(--animation), visibility var(--animation);
-}
 
-.backdrop.is-hidden{
-opacity: 0;
-visibility: hidden;
-pointer-events: inherit;
+  &.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: inherit;
+  }
 }

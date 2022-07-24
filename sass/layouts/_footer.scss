@@ -3,6 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .footer__section {
   display: flex;
   align-items: baseline;
@@ -100,13 +101,14 @@
       border-radius: 4px;
 
       transition: border-color var(--animation);
+
+      &:focus {
+        border-color: var(--accent-color);
+      }
+      
+      &-icon {
+        fill:currentColor;
+      }
 }
 
-.footer__input:focus {
-  border-color: var(--accent-color);
-}
 
-
-.footer__input-icon {
-  fill:currentColor;
-}
